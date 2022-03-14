@@ -11,7 +11,9 @@ void main() async {
   );
   WidgetsFlutterBinding.ensureInitialized();
   final cameras = await availableCameras();
-  runApp(MyApp(cameras: cameras));
+  runApp(
+    MyApp(cameras: cameras),
+  );
 }
 
 class MyApp extends StatelessWidget {

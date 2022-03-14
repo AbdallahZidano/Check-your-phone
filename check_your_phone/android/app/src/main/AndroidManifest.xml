@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE"/>
    <application
-        android:label="check_your_phone"
+        android:label="Check Your Phone"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

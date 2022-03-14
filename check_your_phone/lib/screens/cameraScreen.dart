@@ -62,18 +62,14 @@ class _CameraScreenState extends State<CameraScreen> {
             future: _initializeControllerFuture,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.done) {
-                // If the Future is complete, display the preview.
-                return Expanded(
-                    child: Container(
-                  child: Center(
-                    child: CameraPreview(_controller),
-                  ),
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                  ),
-                ));
+                return Stack(
+                  children: [
+                    Center(
+                      child: CameraPreview(_controller),
+                    ),
+                  ],
+                );
               } else {
-                // Otherwise, display a loading indicator.
                 return const Center(child: CircularProgressIndicator());
               }
             },

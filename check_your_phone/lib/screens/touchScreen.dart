@@ -44,7 +44,10 @@ class _TouchScreenState extends State<TouchScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          Image.asset('assets/images/touchScreen.png'),
+          Image.asset(
+            'assets/images/touchScreen.png',
+            fit: BoxFit.fill,
+          ),
           GestureDetector(
             onPanUpdate: (details) {
               setState(() {
